@@ -1,0 +1,32 @@
+<%!
+private String getName()
+{
+	return "Elena";
+}
+
+private String phone()
+{
+	return "9999999999";
+}
+private String getCity()
+{
+	return "Thrissur";
+}
+%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ --------------------------------------------------   
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Declaration</title>
+</head>
+<body bgcolor="Aliceblue">
+<font size="+3" color="Green">
+Information about <%=getName() %>...<br>
+Contact Number: <%=phone()%><br>
+City: <%=getCity()%>
+</font>
+</body>
+</html>
