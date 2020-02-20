@@ -1,0 +1,54 @@
+//HTML program
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>form</title>
+</head>
+<body>
+<form action="sendRedirect.jsp">
+Name:<input type=text name="name">
+Roll No:<input type=text name="rollno">
+<input type=submit value="Submit">
+</form>
+</body>
+</html>
+-----------------------------------------
+//JSP Program-sendRedirect.jsp
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+String name=request.getParameter("name");
+String rollno=request.getParameter("rollno");
+if(name.equals("Elena") && rollno.equals("11"))
+		{
+	response.sendRedirect("HelloWorld.html");
+		}
+else
+{
+	response.sendRedirect("htjsp.html");
+}
+%>
+</body>
+</html>
+-------------------------------------------
+//HelloWorld.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="Hello" method="post">
+Enter your name:<input type=text name=username>
+Your Friend name:<input type=text name=friendname>
+<input type=submit value="Submit">
+</form>
+</body>
+</html>
